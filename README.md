@@ -68,10 +68,10 @@ Exam Management Application MVP - Outline:
 ---------------------------------------------
 Project Structure:
 
-ExamManagementSystem.API (ASP.NET Core Web API project)
-ExamManagementSystem.Core (Class library for shared logic)
-ExamManagementSystem.Infrastructure (Class library for data access)
-ExamManagementSystem.Web (ASP.NET Core MVC project for the frontend)
+ExamRoom.API (ASP.NET Core Web API project).
+ExamRoom.Core (Class library for shared logic).
+ExamRoom.Infrastructure (Class library for data access).
+ExamRoom.Web (ASP.NET Core MVC project for the frontend).
 
 Step 1: User Authentication and Authorization:
 
