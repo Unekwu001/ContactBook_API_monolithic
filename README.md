@@ -82,6 +82,11 @@ Step 1: User Authentication and Authorization:
 Use ASP.NET Core Identity for user authentication and role-based authorization.
 Create User model and configure ASP.NET Core Identity for authentication.
 Implement user registration, login, and role assignment.
+To do this, Install the necessary NuGet packages for the API project:
+- Microsoft.AspNetCore.Authentication.JwtBearer
+- Microsoft.AspNetCore.Identity.EntityFrameworkCore
+- Microsoft.EntityFrameworkCore.SqlServer
+- Microsoft.EntityFrameworkCore.Tools
 
 Step 2: Exam Creation and Management:
 
