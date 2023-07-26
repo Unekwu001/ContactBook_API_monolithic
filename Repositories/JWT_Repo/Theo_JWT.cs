@@ -10,19 +10,11 @@ namespace ContactBook_API.Repositories.JWT_Repo
     public class Theo_JWT : ITheo_JWT
     {
 
-        private readonly IConfiguration _configuration;
-        public Theo_JWT(IConfiguration configuration)
-        {
-            _configuration = configuration;
-        }
-
-
-
-
+        private readonly IConfiguration configuration;
 
         public string GenerateJwtToken(User user)
         {
-            var jwtSettings = _configuration.GetSection("JwtSettings");
+            var jwtSettings = configuration.GetSection("JwtSettings");
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtSettings["Secret"]));
             var credentials = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
             var claims = new[]
