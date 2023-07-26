@@ -4,7 +4,6 @@ using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using ContactBook_API.Models;
 using Microsoft.EntityFrameworkCore;
-using ContactBook_API.Repositories.JWT_Repo;
  
 
 var builder = WebApplication.CreateBuilder(args);
@@ -27,11 +26,11 @@ builder.Services.AddIdentity<User, IdentityRole>()
     .AddDefaultTokenProviders();
 
 
-//JWT Repo registration
-builder.Services.AddScoped<ITheo_JWT, Theo_JWT>(provider => new Theo_JWT());
+
 
 
 // Configure JWT authentication options-----------------------
+
 var jwtSettings = builder.Configuration.GetSection("JwtSettings");
 var key = Encoding.ASCII.GetBytes(jwtSettings["Secret"]);
 builder.Services.AddAuthentication(options =>
