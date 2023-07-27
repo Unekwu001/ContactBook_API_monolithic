@@ -1,14 +1,15 @@
 ﻿using ContactBook_API.Models;
+using ContactBook_API.Models.ViewModels;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
-namespace ContactBook_API.Controllers
-{  
+namespace ContactBook_API.Controllers.CRUD
+{
     [ApiController]
     [Route("api/[controller]")]
     public class Update_Put_UserByIdController : ControllerBase
     {
-      
+
         private readonly UserManager<User> _userManager;
         public Update_Put_UserByIdController(UserManager<User> userManager)
         {
@@ -18,7 +19,7 @@ namespace ContactBook_API.Controllers
 
         // PUT: /api/User/update/{id}
         [HttpPut("update/{id}")]
-        public async Task<IActionResult> UpdateUser(string id, [FromBody]  PutViewModel model)
+        public async Task<IActionResult> UpdateUser(string id, [FromBody] PutViewModel model)
         {
             var user = await _userManager.FindByIdAsync(id);
 
@@ -31,8 +32,8 @@ namespace ContactBook_API.Controllers
             user.Email = model.Email;
             user.PhoneNumber = model.PhoneNumber;
             user.PasswordHash = model.Password;
-            user.UserName = model.UserName; 
-           
+            user.UserName = model.UserName;
+
 
             var result = await _userManager.UpdateAsync(user);
 

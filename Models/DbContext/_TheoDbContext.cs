@@ -1,8 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using ContactBook_API.Models;
 
-namespace ContactBook_API.Models
+namespace ContactBook_API.Models.DbContext
 {
     public class TheoDbContext : IdentityDbContext<User>
     {
@@ -10,6 +9,6 @@ namespace ContactBook_API.Models
         {
 
         }
-       
+
     }
 }

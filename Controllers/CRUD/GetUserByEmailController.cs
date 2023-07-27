@@ -1,19 +1,19 @@
 ﻿using ContactBook_API.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Configuration;
 
-namespace ContactBook_API.Controllers
+namespace ContactBook_API.Controllers.CRUD
 {
-
     [ApiController]
     [Route("api/[controller]")]
-    public class GetUserByIdController : ControllerBase
+    public class GetUserByEmailController : ControllerBase
     {
 
 
+
+
         private readonly UserManager<User> _userManager;
-        public GetUserByIdController(UserManager<User> userManager)
+        public GetUserByEmailController(UserManager<User> userManager)
         {
             _userManager = userManager;
         }
@@ -21,11 +21,11 @@ namespace ContactBook_API.Controllers
 
 
 
-        // GET: /api/User/{id}
-        [HttpGet("{id}")]
-        public async Task<IActionResult> GetUserById(string id)
+        // GET: /api/User/{email}
+        [HttpGet("{email}")]
+        public async Task<IActionResult> GetUserById(string email)
         {
-            var user = await _userManager.FindByIdAsync(id);
+            var user = await _userManager.FindByEmailAsync(email);
 
             if (user == null)
             {
@@ -37,5 +37,7 @@ namespace ContactBook_API.Controllers
         }
 
 
+
     }
 }
+

@@ -4,7 +4,7 @@ using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using ContactBook_API.Models;
 using Microsoft.EntityFrameworkCore;
- 
+using ContactBook_API.Models.DbContext;
 
 var builder = WebApplication.CreateBuilder(args);
 

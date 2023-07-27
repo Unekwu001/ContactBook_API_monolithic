@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
-namespace ContactBook_API.Controllers
+namespace ContactBook_API.Controllers.CRUD
 {
 
     [ApiController]
@@ -11,7 +11,7 @@ namespace ContactBook_API.Controllers
     {
 
         private readonly UserManager<User> _userManager;
-        public DeleteUserByIdController(UserManager<User> userManager) 
+        public DeleteUserByIdController(UserManager<User> userManager)
         {
             _userManager = userManager;
         }
