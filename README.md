@@ -4,7 +4,7 @@ To Start using the Project
 -----------------------
 - Launch with VS, 
 - Change the connection string within the appsettings.json to your prefered one.
-- Run Entity migrations using this command -"Add-migration <nameOfMigration>"
+- Run Entity migrations using this command -"Add-migration nameOfMigration"
 - Next, run command "Update-Database"
 - Your dataBase is ready and set to go.
 - Run project.
