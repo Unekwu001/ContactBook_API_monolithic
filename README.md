@@ -1,5 +1,16 @@
  ContactBook_API_monolithic (week10_task)
  ------------------------------------
+To Start using the Project
+-----------------------
+- Launch with VS, 
+- Change the connection string within the appsettings.json to your prefered one.
+- Run Entity migrations using this command -"Add-migration <nameOfMigration>"
+- Next, run command "Update-Database"
+- Your dataBase is ready and set to go.
+- Run project.
+- By default, the app on run, redirects to Swagger.
+
+ 
 Intro:
 
 This task is aimed at evaluating your understanding and implementation of API using ASP.NET Core.
